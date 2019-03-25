@@ -1,0 +1,366 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#"
+     xml:base="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:steam="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#aCreerJeu -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#aCreerJeu">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#aPourStudio"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#aPourEditeur -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#aPourEditeur">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#aPublierJeu"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Jeu"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Editeur"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#aPourGenre -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#aPourGenre">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#aPourJeu"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Jeu"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Genre"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#aPourJeu -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#aPourJeu"/>
+    
+
+
+    <!-- http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#aPourStudio -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#aPourStudio">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Jeu"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Studio"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#aPublierJeu -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#aPublierJeu"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#nombreDeJoueurs -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#nombreDeJoueurs">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Jeu"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#nombreDeVentes -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#nombreDeVentes">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Jeu"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Action -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Action">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Course -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Course">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Editeur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Editeur"/>
+    
+
+
+    <!-- http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#FPS -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#FPS">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Genre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Genre"/>
+    
+
+
+    <!-- http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Indie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Indie">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Jeu -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Jeu"/>
+    
+
+
+    <!-- http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#MMO -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#MMO">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Puzzle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Puzzle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#RPG -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#RPG">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Strategie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Strategie">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Studio -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Studio"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Arkane_Studios -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Arkane_Studios">
+        <rdf:type rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Studio"/>
+        <aCreerJeu rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Dishonored"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Bethesda -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Bethesda">
+        <rdf:type rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Editeur"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Studio"/>
+        <aCreerJeu rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Skyrim"/>
+        <aPublierJeu rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Dishonored"/>
+        <aPublierJeu rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Skyrim"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#BrianCronin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#BrianCronin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Editeur"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Studio"/>
+        <aCreerJeu rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#ZeroGear"/>
+        <aPublierJeu rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#ZeroGear"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Dishonored -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Dishonored">
+        <rdf:type rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Action"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#FPS"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Genre"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Jeu"/>
+        <aPourEditeur rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Bethesda"/>
+        <aPourStudio rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Arkane_Studios"/>
+        <nombreDeJoueurs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">870</nombreDeJoueurs>
+        <nombreDeVentes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5000000</nombreDeVentes>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Dreadnought -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Dreadnought">
+        <rdf:type rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Genre"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Jeu"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#MMO"/>
+        <nombreDeJoueurs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">216</nombreDeJoueurs>
+        <nombreDeVentes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000000</nombreDeVentes>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#PUBG -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#PUBG">
+        <rdf:type rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#FPS"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Genre"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Indie"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Jeu"/>
+        <aPourEditeur rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#PUBG_Corporation"/>
+        <aPourStudio rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#PUBG_Corporation"/>
+        <nombreDeJoueurs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">792500</nombreDeJoueurs>
+        <nombreDeVentes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000000</nombreDeVentes>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#PUBG_Corporation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#PUBG_Corporation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Editeur"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Studio"/>
+        <aCreerJeu rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#PUBG"/>
+        <aPublierJeu rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#PUBG"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Portal2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Portal2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Genre"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Jeu"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Puzzle"/>
+        <aPourEditeur rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Valve"/>
+        <aPourStudio rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Valve"/>
+        <nombreDeJoueurs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</nombreDeJoueurs>
+        <nombreDeVentes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20000000</nombreDeVentes>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Skyrim -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Skyrim">
+        <rdf:type rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Genre"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Jeu"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#RPG"/>
+        <aPourEditeur rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Bethesda"/>
+        <aPourStudio rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Bethesda"/>
+        <nombreDeJoueurs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12300</nombreDeJoueurs>
+        <nombreDeVentes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20000000</nombreDeVentes>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Valve -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Valve">
+        <rdf:type rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Editeur"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Studio"/>
+        <aCreerJeu rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Portal2"/>
+        <aPublierJeu rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Portal2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#ZeroGear -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#ZeroGear">
+        <rdf:type rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Course"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Genre"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Indie"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Jeu"/>
+        <aPourEditeur rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#BrianCronin"/>
+        <aPourStudio rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#BrianCronin"/>
+        <nombreDeJoueurs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</nombreDeJoueurs>
+        <nombreDeVentes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200000</nombreDeVentes>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#12_Labours_of_Hercules -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#12_Labours_of_Hercules">
+        <rdf:type rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Genre"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Jeu"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/corentingrard/ontologies/2019/2/steam#Strategie"/>
+        <nombreDeJoueurs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</nombreDeJoueurs>
+        <nombreDeVentes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200000</nombreDeVentes>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
