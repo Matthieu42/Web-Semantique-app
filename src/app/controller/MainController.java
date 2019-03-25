@@ -28,7 +28,7 @@ public class MainController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        sparqlQuery = new SparqlQuery("C:\\Users\\matth\\IdeaProjects\\Web-Semantique-app\\src\\resources\\steam.owl");
+        sparqlQuery = new SparqlQuery("resources/steam.owl");
         titleColumn.setCellValueFactory(new PropertyValueFactory<>("title"));
         nbSellColumn.setCellValueFactory(new PropertyValueFactory<>("nbSell"));
         nbPlayerColumn.setCellValueFactory(new PropertyValueFactory<>("nbPlayers"));
